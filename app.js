@@ -29,6 +29,7 @@ mongoose.set('useUnifiedTopology', true); //for depreceation warning...
 
 var url = process.env.DATABASEURL || "mongodb://localhost:27017/yelp_camp"; //DEFAULT vals
 console.log(process.env.DATABASEURL); //shows you which one..
+
 mongoose.connect(url, { //configs depending on development or production.
 	usenewUrlParser: true,
 	useCreateIndex: true
