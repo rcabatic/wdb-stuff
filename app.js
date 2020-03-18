@@ -28,12 +28,13 @@ mongoose.set('useUnifiedTopology', true); //for depreceation warning...
 //Developement: mongodb+srv://rcabatic:<password>@cluster0-cgfdm.mongodb.net/test?retryWrites=true&w=majority
 
 var url = process.env.DATABASEURL || "mongodb://localhost:27017/yelp_camp"; //DEFAULT vals
+console.log(process.env.DATABASEURL); //shows you which one..
 mongoose.connect(url, { //configs depending on development or production.
 	usenewUrlParser: true,
 	useCreateIndex: true
 }).then(() => {
 	console.log("connected to ATLAS DB!");
-	console.log(process.env.DATABASEURL); //shows you which one..
+	//console.log(process.env.DATABASEURL);
 }).catch(err => {
 	console.log("ERR!", err.message)
 });
