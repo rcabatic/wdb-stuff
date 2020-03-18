@@ -20,15 +20,19 @@ var commentRoutes			= require("./routes/comments"),
 
 //seedDB(); //SEEED MEEEE
 mongoose.set('useUnifiedTopology', true); //for depreceation warning...
+
+//Production:
 //mongoose.connect("mongodb://localhost:27017/yelp_camp", {useNewUrlParser: true}); //creates yelpcamp db.
-console.log(process.env.DATABASEURL);
+//or
 //from atlas:
-//mongodb+srv://rcabatic:<password>@cluster0-cgfdm.mongodb.net/test?retryWrites=true&w=majority
-mongoose.connect("mongodb+srv://rcabatic:NASA4ever808*@cluster0-cgfdm.mongodb.net/test?retryWrites=true&w=majority", {
+//Developement: mongodb+srv://rcabatic:<password>@cluster0-cgfdm.mongodb.net/test?retryWrites=true&w=majority
+
+mongoose.connect(process.env.DATABASEURL, { //configs depending on development or production.
 	usenewUrlParser: true,
 	useCreateIndex: true
 }).then(() => {
 	console.log("connected to ATLAS DB!");
+	console.log(process.env.DATABASEURL); //shows you which one..
 }).catch(err => {
 	console.log("ERR!", err.message)
 });
