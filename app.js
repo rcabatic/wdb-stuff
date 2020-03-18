@@ -68,6 +68,6 @@ app.use("/campgrounds/:id/comments", commentRoutes);
 
 //======================== LISTEN AND RUN =====================================
 
-app.listen(3000, function(){ 
+app.listen(process.env.PORT || 3000, function(){
 	console.log('YELP CAMP SERVER INITIATED.');
 });
