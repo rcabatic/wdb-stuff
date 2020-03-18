@@ -21,7 +21,7 @@ var commentRoutes			= require("./routes/comments"),
 //seedDB(); //SEEED MEEEE
 mongoose.set('useUnifiedTopology', true); //for depreceation warning...
 //mongoose.connect("mongodb://localhost:27017/yelp_camp", {useNewUrlParser: true}); //creates yelpcamp db.
-
+console.log(process.env.DATABASEURL);
 //from atlas:
 //mongodb+srv://rcabatic:<password>@cluster0-cgfdm.mongodb.net/test?retryWrites=true&w=majority
 mongoose.connect("mongodb+srv://rcabatic:NASA4ever808*@cluster0-cgfdm.mongodb.net/test?retryWrites=true&w=majority", {
