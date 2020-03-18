@@ -27,7 +27,8 @@ mongoose.set('useUnifiedTopology', true); //for depreceation warning...
 //from atlas:
 //Developement: mongodb+srv://rcabatic:<password>@cluster0-cgfdm.mongodb.net/test?retryWrites=true&w=majority
 
-mongoose.connect(process.env.DATABASEURL, { //configs depending on development or production.
+var url = process.env.DATABASEURL || "mongodb://localhost:27017/yelp_camp"; //DEFAULT vals
+mongoose.connect(url, { //configs depending on development or production.
 	usenewUrlParser: true,
 	useCreateIndex: true
 }).then(() => {
