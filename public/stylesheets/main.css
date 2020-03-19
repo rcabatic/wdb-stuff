@@ -3,6 +3,14 @@ body{
 	color: #fff;
 }
 
+input {
+	color: #88807B;
+}
+
+button{
+	color: #88807B;
+}
+
 .thumbail{
 	padding: 0px;
 }
