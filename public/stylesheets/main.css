@@ -1,6 +1,5 @@
 body{
 	background-color: #88807B;
-	color: #fff;
 }
 
 input {
@@ -13,6 +12,7 @@ button{
 
 .thumbail{
 	padding: 0px;
+	color: black;
 }
 
 .thumbnail img { /* //on index and show */
